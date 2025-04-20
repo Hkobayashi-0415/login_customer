@@ -3,7 +3,12 @@ Reactを使用したlogin/customer管理画面
 
 # 顧客管理フロントエンドアプリ（React + MUI）
 
-このアプリケーションは、React と Material UI (MUI) を使用した簡易的な顧客管理画面です。ログイン画面と顧客一覧画面を備え、フィルター・並び替え・検索機能に対応しています。
+このアプリケーションは、React と Material UI (MUI) を使用した簡易的な顧客管理画面です。
+ログイン画面と顧客一覧画面を備え、フィルター・並び替え・検索機能に対応しています。
+
+開発環境でアプリを起動した後、それぞれ以下のURLで確認できます
+ - ログイン画面：http://localhost:3000/login
+ - 顧客一覧画面：http://localhost:3000/customer
 
 ---
 ## 📁 ディレクトリ構成
@@ -20,11 +25,12 @@ Reactを使用したlogin/customer管理画面
 └── index.js
 
 ---
-## 📦 使用技術・ライブラリ
-- React 18+
-- Material UI (MUI)
-- JavaScript（ES6）
-- Create React App ベース（または Cursor 環境）
+## 📦 技術スタック
+- React 18.2.0
+- Material UI v7
+- JavaScript (ES6+)
+- Create React App (CRA) + CRACO
+- React Router v7
 
 ---
 ## 🚀 機能一覧
