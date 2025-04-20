@@ -1,4 +1,4 @@
-# login_customer
+# login_customer_app
 Reactを使用したlogin/customer管理画面
 
 # 顧客管理フロントエンドアプリ（React + MUI）
