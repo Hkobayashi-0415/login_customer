@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# login_customer_app
+Reactを使用したlogin/customer管理画面
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 顧客管理フロントエンドアプリ（React + MUI）
 
-## Available Scripts
+このアプリケーションは、React と Material UI (MUI) を使用した簡易的な顧客管理画面です。
+ログイン画面と顧客一覧画面を備え、フィルター・並び替え・検索機能に対応しています。
 
-In the project directory, you can run:
+開発環境でアプリを起動した後、それぞれ以下のURLで確認できます。
+ - ログイン画面：http://localhost:3000/login
+ - 顧客一覧画面：http://localhost:3000/customer
 
-### `npm start`
+---
+## 📁 ディレクトリ構成
+/src
+├── components/
+│   ├── Login.jsx
+│   └── CustomerList.jsx
+├── mock/
+│   ├── users.js        // ログイン用テストユーザー
+│   └── customers.js    // 顧客テストデータ
+├── theme/
+│   └── colors.js       // カラーパレット（今回新設）
+├── App.jsx
+└── index.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
+## 📦 技術スタック
+- React 18.2.0
+- Material UI v7
+- JavaScript (ES6+)
+- Create React App (CRA) + CRACO
+- React Router v7
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
+## 🚀 機能一覧
 
-### `npm test`
+### ✅ ログイン画面（`Login.jsx`）
+- ユーザーIDとパスワードの入力欄
+- シンプルなバリデーション（モックユーザー照合）
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ✅ 顧客一覧画面（`CustomerList.jsx`）
+- 顧客名、ふりがな、性別、種別を表示（ピル型ラベル）
+- 検索機能（名前・ふりがな・会社名・メール）
+- フィルター機能（性別・個人/会社）
+- 並び替え機能（顧客名昇順／降順切替）
+- デザイン調整（ラベル色、テーブル強調、アクセシビリティ配慮）
 
-### `npm run build`
+---
+## 🎨 デザイン・スタイル
+- カラーパレットは `/theme/colors.js` にて集中管理
+- 青系を基調に視認性と一貫性を重視
+- ラベルカラーは個人/法人・男女を識別しやすいトーンで設計
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+## 🧪 モックデータ（`/mock/`）
+- 顧客データおよびユーザー情報は静的に管理
+- 今後のAPI接続やバックエンド連携を見据えた仮実装
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
+## ✍️ 制作意図
+- 不慣れなエンジニアでも保守しやすいよう、1ファイルにまとめた設計
+- コメント付きで機能ごとにブロック整理し、将来的なリファクタにも配慮
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+## 📌 セットアップ手順
+```bash
+# パッケージインストール
+npm install
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 開発サーバー起動
+npm start
