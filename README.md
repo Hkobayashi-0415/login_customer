@@ -31,6 +31,8 @@ Reactを使用したlogin/customer管理画面
 - JavaScript (ES6+)
 - Create React App (CRA) + CRACO
 - React Router v7
+- Docker
+- Nginx
 
 ---
 ## 🚀 機能一覧
@@ -64,9 +66,37 @@ Reactを使用したlogin/customer管理画面
 
 ---
 ## 📌 セットアップ手順
+
+### ローカル環境での実行
 ```bash
 # パッケージインストール
 npm install
 
 # 開発サーバー起動
 npm start
+```
+
+### Docker環境での実行
+```bash
+# コンテナのビルドと起動
+docker compose up --build
+
+# バックグラウンドで実行する場合
+docker compose up -d --build
+
+# コンテナの停止
+docker compose down
+
+# ログの確認
+docker compose logs -f
+```
+
+#### 開発環境の特徴
+- ホットリロード対応
+- ソースコードの変更がリアルタイムで反映
+- ポート3000でアクセス可能
+
+#### 本番環境の特徴
+- Nginxを使用した効率的な静的ファイル配信
+- 適切なキャッシュ設定によるパフォーマンス最適化
+- マルチステージビルドによるイメージサイズの最適化
